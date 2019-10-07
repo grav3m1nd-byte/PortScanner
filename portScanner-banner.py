@@ -58,12 +58,12 @@ def main():
 
     # For loop is used to go by one IP address at a time, from index 0 to the last item,
     # per the size (len()) of the list, then print a list of IP addresses to scan.
-    for i in range(0, len(scanhost)):
+    for i in range(len(scanhost)):
         print("\t[*]\t",scanhost[i])
 
     # Similar as the above, this for loop will iterate through each item in the IP address list,
     # print one item, and then go through the range of ports as designated in the nested for loop.
-    for n in range(0, len(scanhost)):
+    for n in range(len(scanhost)):
         print("\nScanning IP Address: ", scanhost[n])
         for port in range(sport, (eport + 1)):
             try:
